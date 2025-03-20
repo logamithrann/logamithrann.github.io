@@ -9,8 +9,10 @@
     font-weight: 400;
     font-style: normal;
   }
-  .navbar {
+
+.navbar {
     background-color: ghostwhite;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -23,7 +25,10 @@
     text-decoration: none;
     color: black;
     position: relative;
-    left: 15px;
+    left: 535px;
   }
-  
-  
+
+.h1 {
+  position: relative;
+  top: 200px;
+}
