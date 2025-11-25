@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports Students List</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+        background: #f5f7fa;
+    }
+
+    /* NAVBAR */
+    nav {
+        background: #111;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 25px;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav .brand {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 18px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    /* MOBILE MENU BUTTON */
+    #menu-btn{
+        display: none;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    /* MOBILE NAV */
+    @media (max-width: 600px) {
+        nav ul {
+            display: none;
+            flex-direction: column;
+            background: #111;
+            padding: 15px;
+        }
+        #menu-btn {
+            display: block;
+        }
+    }
+
+    /* HEADER SECTION */
+    header {
+        height: 90vh;
+        background: linear-gradient(180deg,#0649b6,#002c6d);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 36px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+    /* SLIDER */
+    .slider {
+        margin: 70px auto;
+        width: 85%;
+        max-width: 900px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .slide-track {
+        display: flex;
+        animation: slide 14s linear infinite;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        font-size: 28px;
+        font-weight: 600;
+        background: #e3ebff;
+        border-radius: 10px;
+        color: #0d2977;
+    }
+
+    @keyframes slide {
+        0% {transform: translateX(0%);}
+        25% {transform: translateX(-100%);}
+        50% {transform: translateX(-200%);}
+        75% {transform: translateX(-300%);}
+        100% {transform: translateX(0%);}
+    }
+
+    /* STUDENT LIST BLOCK */
+    section {
+        padding: 30px 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 18px 25px;
+        margin: 10px auto;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 9px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.12);
+        font-size: 18px;
+    }
+
+    /* FRONT PAGE GITHUB MESSAGE */
+    .github-hero {
+        margin-top: 30px;
+        font-size: 15px;
+    }
+    .github-hero a{
+        font-weight: 600;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    /* FOOTER GITHUB */
+    footer {
+        text-align: center;
+        padding: 15px 10px;
+        margin-top: 50px;
+        font-size: 14px;
+        background: #eee;
+    }
+    footer a {
+        color: #0039a6;
+        font-weight: 600;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+
+<!-------------------- NAV -------------------->
+<nav>
+    <div class="brand">St. John's MHSS</div>
+    <span id="menu-btn">☰</span>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#list">Students</a></li>
+    </ul>
+</nav>
+
+<!-------------------- HERO -------------------->
+<header id="home">
+    <h1>St. John’s Matriculation Higher Secondary School</h1>
+    <p>Sports Student Profile – 2024</p>
+
+    <div class="github-hero">
+        <span>Also visit my GitHub profile to look my other tiny works →</span>
+        <a href="https://github.com/logamithrann" target="_blank">@logamithrann</a>
+    </div>
+</header>
+
+<!-------------------- SLIDER -------------------->
+<div class="slider">
+    <div class="slide-track">
+        <div class="slide">Leo Anto</div>
+        <div class="slide">Vinayak Saran</div>
+        <div class="slide">Saravana</div>
+        <div class="slide">Arjun</div>
+    </div>
+</div>
+
+<!-------------------- STUDENT LIST -------------------->
+<section id="list">
+    <div class="card">🏅 <b>Leo Anto</b> — Section Card</div>
+    <div class="card">🏅 <b>Vinayak Saran</b> — Section Card</div>
+    <div class="card">🏅 <b>Saravana</b> — Section Card</div>
+    <div class="card">🏅 <b>Arjun</b> — Section Card</div>
+    <div class="card">📘 Class Teacher: <b>Jovin Ebenezeer</b></div>
+</section>
+
+<!-------------------- FOOTER -------------------->
+<footer>
+    Visit my GitHub profile:
+    <a href="https://github.com/logamithrann" target="_blank">
+        github.com/logamithrann
+    </a>
+</footer>
+
+
+<script>
+    // Mobile menu show/hide
+    const btn = document.getElementById("menu-btn");
+    const nav = document.querySelector("nav ul");
+    btn.onclick = () => {
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    };
+</script>
+
+</body>
+</html>
